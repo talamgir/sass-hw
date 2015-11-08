@@ -1,0 +1,80 @@
+@import '../bourbon/bourbon';
+
+$star-wars-font: 'Press Start 2P', cursive;
+h1, h2 {
+	font-family:$star-wars-font
+}
+
+@mixin transition($property,$time,$style,$duration){
+	-webkit-transition:$property $time $style $duration;
+}
+nav {
+	ul {
+		
+		li{
+			list-style: none;
+			display: inline-block;
+			a {
+				color: groove;
+				display: inline-block;
+				padding: 10px;
+				text-decoration: none;
+				background-color: orange;
+				border-radius: 4px;
+				@include transition(background-color, 500ms, ease-in,  .2ms);
+				
+
+			}
+		}
+		a:hover {
+			color: red; 
+			background-color: blue;
+
+		}		
+
+	}
+
+}
+
+body {
+	background: tint(blue, 47%);
+}
+
+
+
+$list-list: disc, circle, decimal;
+
+@each $style in $list-list {
+	li--#{$style}	{
+		list-style: $list-list
+	}
+}
+
+p {
+	@extend h1;
+	color: magenta;
+}
+
+p {
+	fo
+}
+
+
+
+
+
+
+// a {
+// 	color: blue;
+// 	display: inline-block;
+// 	padding: 10px;
+// 	text-decoration: none;
+// 	background-color: orange;
+// 	border-radius: 4px;
+// 	@include transition(background-color, 1s .5s, color 2s);
+// }
+// a:hover {
+// 	color: red; 
+// 	background-color: blue;
+// }
+
